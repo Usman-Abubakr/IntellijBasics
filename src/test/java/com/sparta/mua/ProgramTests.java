@@ -27,4 +27,11 @@ public class ProgramTests {
     void checkForGoodEvening(int time) {
         Assertions.assertEquals("Good Evening!", Program.getGreeting(time));
     }
+
+    @ParameterizedTest
+    @ValueSource(ints = {-1,50,24})
+    @DisplayName("check that 12,15,18 return Invalid time!")
+    void checkForInvalidTime(int time) {
+        Assertions.assertEquals("Invalid time!", Program.getGreeting(time));
+    }
 }
