@@ -9,6 +9,7 @@ public class FilmClassifications {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter age: ");
+        // checks if the input is a number
         if(scanner.hasNextInt()) {
             age = scanner.nextInt();
             System.out.println(availableClassifications(age));
